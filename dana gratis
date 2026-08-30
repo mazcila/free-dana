@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>DANA — Klaim Rp40.000 Sekarang</title>
+<meta name="description" content="Promo spesial: saldo Rp40.000 untuk 10 pengguna tercepat hari ini.">
+<meta name="theme-color" content="#108EE9">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23108EE9'/%3E%3Ctext x='32' y='45' font-family='Arial' font-size='36' font-weight='bold' fill='white' text-anchor='middle'%3ED%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Luckiest+Guy&family=Permanent+Marker&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --blue:#108EE9; --blue-deep:#0A76C4; --blue-soft:#EAF4FE;
+    --ink:#10263A; --muted:#61718A; --line:#E3EAF3;
+    --bg:#F2F6FB; --gold-soft:#FFF4DC; --warn:#C77800;
+    --danger:#E5342B; --yellow:#FFD400; --black:#111;
+    --font-app:'Plus Jakarta Sans',sans-serif;
+    --font-punch:'Luckiest Guy',cursive;
+    --font-hand:'Permanent Marker',cursive;
+  }
+  html,body{height:100%}
+  body{
+    font-family:var(--font-app); background:#0B1220; color:var(--ink);
+    -webkit-font-smoothing:antialiased; display:flex; justify-content:center;
+  }
+  /* ===== Bingkai "layar HP" ===== */
+  #phone{
+    position:relative; width:100%; max-width:430px; background:var(--bg);
+    min-height:100dvh; overflow-y:auto; overflow-x:hidden; scrollbar-width:none;
+  }
+  #phone::-webkit-scrollbar{display:none}
+  @media(min-width:520px){
+    body{align-items:center; padding:24px}
+    #phone{min-height:0; height:min(880px,calc(100dvh - 48px)); border-radius:32px;
+      box-shadow:0 30px 80px rgba(0,0,0,.55);}
+  }
+
+  .ic{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+  /* ================= SCENE 1 : PROMO PALSU ================= */
+  .appbar{
+    background:var(--blue); color:#fff; padding:14px 16px;
+    display:flex; align-items:center; gap:10px; position:sticky; top:0; z-index:20;
+  }
+  .logo{display:flex;align-items:center;gap:8px;font-weight:800;font-size:18px}
+  .logo-mark{width:28px;height:28px;border-radius:9px;background:#fff;color:var(--blue);
+    display:grid;place-items:center;font-weight:800;font-size:15px}
+  .appbar .tag{font-size:10px;font-weight:800;background:rgba(255,255,255,.18);
+    padding:4px 9px;border-radius:99px;letter-spacing:.8px;text-transform:uppercase}
+  .appbar .spacer{flex:1}
+  .icon-btn{background:transparent;border:0;color:#fff;width:32px;height:32px;
+    display:grid;place-items:center;cursor:pointer}
+
+  .tape{background:var(--blue-deep);color:#D8ECFD;overflow:hidden;white-space:nowrap;
+    font-size:11px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;padding:7px 0}
+  .tape span{display:inline-block;animation:tape 16s linear infinite}
+  @keyframes tape{to{transform:translateX(-50%)}}
+
+  .main{padding:16px 16px 6px;display:flex;flex-direction:column;gap:13px}
+  .card{
+    background:#fff;border-radius:20px;padding:18px;border:1px solid var(--line);
+    box-shadow:0 2px 10px rgba(16,38,58,.06);animation:up .5s ease both;
+  }
+  .main>*:nth-child(1){animation-delay:.05s}
+  .main>*:nth-child(2){animation-delay:.15s}
+  .main>*:nth-child(3){animation-delay:.25s}
+  .main>*:nth-child(4){animation-delay:.35s}
+  @keyframes up{from{opacity:0;transform:translateY(14px)}}
+
+  .pill{display:inline-flex;align-items:center;gap:6px;background:var(--gold-soft);color:var(--warn);
+    font-size:10.5px;font-weight:800;letter-spacing:1px;text-transform:uppercase;
+    padding:6px 11px;border-radius:99px;border:1px solid #F0DFAE}
+  .pill .ic{width:13px;height:13px}
+  .hero h2{font-size:14.5px;font-weight:700;color:var(--muted);margin-top:12px}
+  .amount{font-size:52px;font-weight:800;letter-spacing:-1px;color:var(--blue);
+    font-variant-numeric:tabular-nums;line-height:1.15;margin:2px 0 6px}
+  .hero .lead{font-size:13.5px;color:var(--muted);line-height:1.6}
+
+  .klabel{font-size:10.5px;font-weight:800;letter-spacing:1.3px;text-transform:uppercase;color:var(--muted)}
+  .count{display:flex;align-items:center;gap:6px;margin:10px 0 16px}
+  .digit{background:var(--ink);color:#fff;font-weight:800;font-size:24px;border-radius:10px;
+    min-width:46px;height:44px;display:grid;place-items:center;font-variant-numeric:tabular-nums}
+  .digit.hot{background:var(--danger);animation:hot .8s infinite}
+  @keyframes hot{50%{background:#B3241C}}
+  .count .sep{font-weight:800;font-size:20px;animation:blink 1s steps(2) infinite}
+  @keyframes blink{50%{opacity:.25}}
+
+  .slots-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px}
+  .slots-row b{font-size:14px}
+  .seg-bar{display:flex;gap:5px}
+  .seg{flex:1;height:10px;border-radius:99px;background:#DCE6F2}
+  .seg.on{background:var(--blue)}
+  .seg.last{animation:segblink 1s infinite}
+  @keyframes segblink{50%{opacity:.3}}
+  .slot-note{display:flex;gap:6px;align-items:center;margin-top:10px;font-size:12.5px;
+    font-weight:700;color:var(--warn)}
+  .slot-note .ic{width:14px;height:14px}
+
+  .live{display:flex;align-items:center;gap:9px;margin-top:15px;padding-top:13px;
+    border-top:1px dashed var(--line);font-size:12.5px;font-weight:600;color:var(--muted)}
+  .live b{color:var(--ink)}
+  .dot{width:8px;height:8px;border-radius:50%;background:#2FBF71;position:relative;flex:none}
+  .dot::after{content:"";position:absolute;inset:-4px;border-radius:50%;
+    border:2px solid #2FBF71;opacity:.5;animation:ping 1.6s infinite}
+  @keyframes ping{to{transform:scale(1.8);opacity:0}}
+
+  .ticker-head{display:flex;align-items:center;gap:8px;margin-bottom:4px}
+  .feed{list-style:none}
+  .feed li{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--line);animation:slidein .4s ease}
+  .feed li:last-child{border-bottom:0;padding-bottom:2px}
+  @keyframes slidein{from{opacity:0;transform:translateY(-8px)}}
+  .avatar{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;
+    color:#fff;font-size:12px;font-weight:800;flex:none}
+  .feed .who{flex:1;min-width:0}
+  .feed .who b{display:block;font-size:13px}
+  .feed .who span{font-size:11.5px;color:var(--muted)}
+  .feed .amt{font-size:12.5px;font-weight:800;color:var(--blue)}
+  .feed .when{font-size:11px;color:var(--muted)}
+
+  .chips{display:flex;gap:8px;flex-wrap:wrap;animation:up .5s ease .35s both}
+  .chip{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:700;
+    color:var(--muted);background:#fff;border:1px solid var(--line);border-radius:99px;padding:7px 12px}
+  .chip .ic{width:14px;height:14px;color:var(--blue)}
+
+  .foot{padding:4px 18px 14px;font-size:10px;color:#96A5BA;line-height:1.5;text-align:center}
+
+  /* CTA melekat di bawah */
+  .cta-wrap{position:sticky;bottom:0;z-index:30;background:rgba(255,255,255,.93);
+    backdrop-filter:blur(8px);border-top:1px solid var(--line);
+    padding:12px 16px calc(12px + env(safe-area-inset-bottom))}
+  .steps{display:none;flex-direction:column;gap:6px;margin-bottom:10px}
+  .steps.show{display:flex}
+  .step{display:flex;align-items:center;gap:9px;font-size:12.5px;font-weight:600;
+    color:var(--muted);background:var(--blue-soft);border-radius:10px;padding:8px 11px;animation:slidein .3s ease}
+  .step.done{color:#18794D;background:#E8F7EF}
+  .step.fail{color:var(--danger);background:#FDECEA;font-weight:700;animation:shiver .3s}
+  @keyframes shiver{25%{transform:translateX(-3px)}75%{transform:translateX(3px)}}
+  .step .st{width:16px;height:16px;flex:none;display:grid;place-items:center}
+  .step .ic{width:15px;height:15px}
+  .spinner{width:14px;height:14px;border-radius:50%;border:2px solid rgba(16,142,233,.25);
+    border-top-color:var(--blue);animation:spin .7s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+
+  .btn-cta{position:relative;overflow:hidden;width:100%;border:0;background:var(--blue);
+    color:#fff;font-family:var(--font-app);font-weight:800;font-size:16px;letter-spacing:.4px;
+    padding:16px;border-radius:16px;cursor:pointer;display:flex;align-items:center;
+    justify-content:center;gap:10px;transition:transform .12s;
+    box-shadow:0 8px 20px rgba(16,142,233,.35);animation:pulse 2s infinite}
+  .btn-cta:active{transform:scale(.965)}
+  .btn-cta:disabled{animation:none;cursor:default}
+  @keyframes pulse{
+    0%{box-shadow:0 8px 20px rgba(16,142,233,.35),0 0 0 0 rgba(16,142,233,.4)}
+    70%{box-shadow:0 8px 20px rgba(16,142,233,.35),0 0 0 16px rgba(16,142,233,0)}
+    100%{box-shadow:0 8px 20px rgba(16,142,233,.35),0 0 0 0 rgba(16,142,233,0)}
+  }
+  .btn-cta .sheen{position:absolute;top:0;bottom:0;left:-70%;width:45%;
+    background:rgba(255,255,255,.28);transform:skewX(-22deg);animation:sheen 3.2s ease-in-out infinite;pointer-events:none}
+  @keyframes sheen{0%,60%{left:-70%}95%,100%{left:135%}}
+  .btn-cta:disabled .sheen{display:none}
+  .btn-cta .chev{animation:nudge 1.2s infinite}
+  @keyframes nudge{50%{transform:translateX(4px)}}
+  .micro{font-size:10px;color:var(--muted);text-align:center;margin-top:8px}
+
+  /* ================= SCENE 2 : PRANK! ================= */
+  #scenePromo{display:block}
+  body.pranked #scenePromo{display:none}
+  #scenePrank{display:none}
+  body.pranked #scenePrank{
+    display:flex;min-height:100dvh;position:relative;overflow:hidden;
+    flex-direction:column;align-items:center;justify-content:center;text-align:center;
+    padding:40px 20px;color:var(--black);
+    background:var(--yellow);
+    background-image:radial-gradient(rgba(0,0,0,.07) 1.2px,transparent 1.2px);
+    background-size:16px 16px;
+  }
+  .prank-inner{display:flex;flex-direction:column;align-items:center;width:100%}
+
+  .eyebrow{background:var(--black);color:var(--yellow);font-weight:800;font-size:11px;
+    letter-spacing:1.6px;text-transform:uppercase;padding:9px 15px;border-radius:99px;
+    transform:rotate(-2deg);animation:pop .5s cubic-bezier(.2,1.6,.4,1) .1s both}
+  .hiya{font-family:var(--font-punch);font-size:clamp(42px,11.5vw,66px);line-height:.92;
+    margin:18px 0 4px;text-transform:uppercase;
+    animation:pop .55s cubic-bezier(.2,1.6,.4,1) .22s both}
+  .hiya em{font-style:normal;color:var(--danger);text-shadow:3px 3px 0 var(--black)}
+  @keyframes pop{from{opacity:0;transform:scale(.4) rotate(-5deg)}}
+
+  .polaroid{position:relative;background:#fff;padding:12px 12px 14px;border-radius:6px;
+    box-shadow:0 18px 40px rgba(0,0,0,.28);transform:rotate(-3deg);margin:24px 0 12px;
+    animation:slam .6s cubic-bezier(.2,1.4,.3,1) .38s both;cursor:pointer;
+    -webkit-tap-highlight-color:transparent}
+  @keyframes slam{
+    from{opacity:0;transform:rotate(6deg) scale(.35)}
+    60%{transform:rotate(-4deg) scale(1.05)}
+    to{transform:rotate(-3deg) scale(1)}
+  }
+  .polaroid.wiggle{animation:wiggle .5s ease}
+  @keyframes wiggle{
+    20%{transform:rotate(-7deg) scale(1.05)}
+    45%{transform:rotate(1deg) scale(1.02)}
+    70%{transform:rotate(-5deg) scale(1)}
+  }
+  .polaroid img{display:block;width:min(72vw,300px);aspect-ratio:1/1;object-fit:cover;
+    border-radius:3px;background:#EDEDED}
+  .polaroid .cap{font-family:var(--font-hand);font-size:17px;margin-top:10px;color:#222}
+  .tape-strip{position:absolute;width:86px;height:24px;background:rgba(255,255,255,.6);
+    border:1px solid rgba(0,0,0,.05);top:-11px;box-shadow:0 2px 5px rgba(0,0,0,.14)}
+  .tape-strip.l{left:-26px;transform:rotate(-38deg)}
+  .tape-strip.r{right:-26px;transform:rotate(38deg)}
+  .stamp{position:absolute;top:-18px;right:-16px;transform:rotate(12deg);
+    font-family:var(--font-punch);font-size:21px;letter-spacing:1px;color:var(--danger);
+    border:4px solid var(--danger);border-radius:8px;padding:4px 11px;
+    background:rgba(255,255,255,.78);
+    animation:stampin .45s cubic-bezier(.3,2,.4,1) 1.05s both}
+  @keyframes stampin{from{opacity:0;transform:rotate(12deg) scale(2.6)}}
+  .heart{position:absolute;pointer-events:none;z-index:5;animation:floatup .9s ease-out forwards}
+  .heart .ic{width:22px;height:22px;fill:currentColor;stroke:none;color:var(--danger)}
+  @keyframes floatup{
+    from{opacity:1;transform:translateY(0) scale(.6)}
+    to{opacity:0;transform:translateY(-90px) scale(1.3) rotate(-14deg)}
+  }
+
+  .sub{max-width:310px;font-size:13.5px;font-weight:600;line-height:1.55;
+    color:rgba(0,0,0,.75);animation:rise .5s ease .6s both}
+  @keyframes rise{from{opacity:0;transform:translateY(10px)}}
+
+  .actions{display:flex;gap:10px;margin-top:24px;flex-wrap:wrap;justify-content:center;
+    animation:rise .5s ease .75s both}
+  .btn-dark,.btn-ghost{
+    font-family:var(--font-app);font-weight:800;font-size:14px;letter-spacing:.3px;
+    padding:14px 20px;border-radius:99px;cursor:pointer;display:inline-flex;
+    align-items:center;gap:8px;border:3px solid var(--black);
+    transition:transform .1s,box-shadow .1s;box-shadow:4px 4px 0 var(--black);
+  }
+  .btn-dark{background:var(--black);color:#fff}
+  .btn-dark .ic{color:var(--yellow)}
+  .btn-ghost{background:transparent;color:var(--black)}
+  .btn-dark:active,.btn-ghost:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--black)}
+  .tapline{margin-top:22px;font-size:12.5px;font-weight:700;color:rgba(0,0,0,.62);
+    background:rgba(255,255,255,.55);border:2px solid rgba(0,0,0,.14);border-radius:99px;
+    padding:7px 15px;animation:rise .5s ease .85s both}
+
+  /* Hujan monyet */
+  #rain{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:4}
+  .drop{position:absolute;top:-80px;border-radius:50%;overflow:hidden;
+    border:3px solid #fff;box-shadow:0 6px 14px rgba(0,0,0,.25);
+    animation:fall var(--dur) ease-in var(--delay) forwards}
+  .drop img{width:100%;height:100%;object-fit:cover;display:block}
+  @keyframes fall{
+    0%{transform:translate3d(0,-10vh,0) rotate(0deg);opacity:0}
+    6%{opacity:1}
+    100%{transform:translate3d(var(--dx),115vh,0) rotate(var(--spin));opacity:1}
+  }
+
+  /* Efek global */
+  #flash{position:fixed;inset:0;background:#fff;opacity:0;pointer-events:none;z-index:99}
+  #flash.go{animation:flashy .5s ease-out}
+  @keyframes flashy{0%{opacity:1}100%{opacity:0}}
+  #phone.shake{animation:shake .55s}
+  @keyframes shake{
+    10%,90%{transform:translate(-2px,1px)}
+    20%,80%{transform:translate(4px,-2px)}
+    30%,70%{transform:translate(-6px,2px)}
+    40%,60%{transform:translate(5px,-1px)}
+    50%{transform:translate(-4px,2px)}
+  }
+  #toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);
+    background:var(--ink);color:#fff;font-size:13px;font-weight:600;padding:12px 18px;
+    border-radius:99px;opacity:0;pointer-events:none;transition:.3s;z-index:120;
+    display:flex;gap:8px;align-items:center;max-width:88vw}
+  #toast .ic{width:16px;height:16px;color:#4ADE80}
+  #toast.show{opacity:1;transform:translate(-50%,0)}
+  #sndBtn{position:fixed;right:14px;bottom:14px;z-index:110;width:42px;height:42px;
+    border-radius:50%;background:#fff;border:1px solid var(--line);cursor:pointer;
+    box-shadow:0 4px 14px rgba(0,0,0,.2);display:grid;place-items:center;color:var(--ink)}
+</style>
+</head>
+<body>
+
+<!-- Sprite ikon (SVG inline, tanpa emoji) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-gift" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C11 3 12 8 12 8s1-5 4.5-5a2.5 2.5 0 0 1 0 5"/></symbol>
+  <symbol id="i-zap" viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.2-2.9 7.4-7 9-4.1-1.6-7-4.8-7-9V6z"/><path d="M9 11.5l2 2 4-4"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6-10-6-10-6z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-share" viewBox="0 0 24 24"><circle cx="6" cy="12" r="2.5"/><circle cx="17" cy="5.5" r="2.5"/><circle cx="17" cy="18.5" r="2.5"/><path d="M8.2 10.8l6.6-4M8.2 13.2l6.6 4"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v6h-6"/></symbol>
+  <symbol id="i-vol" viewBox="0 0 24 24"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.4 5.6a9 9 0 0 1 0 12.8"/></symbol>
+  <symbol id="i-volx" viewBox="0 0 24 24"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="m16 9 6 6"/><path d="m22 9-6 6"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21.2l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v6"/><path d="M12 16.5v.01"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></symbol>
+  <symbol id="i-dots" viewBox="0 0 24 24"><circle cx="12" cy="5" r="1.4"/><circle cx="12" cy="12" r="1.4"/><circle cx="12" cy="19" r="1.4"/></symbol>
+</svg>
+
+<div id="phone">
+
+  <!-- ============ SCENE 1 : PROMO PALSU ============ -->
+  <section id="scenePromo">
+    <header class="appbar">
+      <div class="logo"><span class="logo-mark">D</span>DANA</div>
+      <span class="tag">Promo</span>
+      <span class="spacer"></span>
+      <button class="icon-btn" aria-label="Menu"><svg class="ic"><use href="#i-dots"/></svg></button>
+    </header>
+
+    <div class="tape">
+      <span>Flash sale grup &middot; Rp40.000 untuk 10 orang tercepat &middot; Setiap jam &middot; Flash sale grup &middot; Rp40.000 untuk 10 orang tercepat &middot; Setiap jam &middot; </span>
+    </div>
+
+    <div class="main">
+      <section class="card hero">
+        <span class="pill"><svg class="ic"><use href="#i-zap"/></svg>Promo grup tercepat</span>
+        <h2>Kamu terpilih untuk menerima</h2>
+        <div class="amount" id="amount">Rp0</div>
+        <p class="lead">Saldo langsung masuk ke dompet DANA-mu untuk <b>10 pengguna tercepat</b> pada periode klaim jam ini.</p>
+      </section>
+
+      <section class="card">
+        <span class="klabel">Berakhir dalam</span>
+        <div class="count">
+          <div class="digit" id="mm">05</div><span class="sep">:</span><div class="digit" id="ss">00</div>
+        </div>
+        <div class="slots-row">
+          <span class="klabel">Slot terklaim</span>
+          <b id="slotCount">7/10</b>
+        </div>
+        <div class="seg-bar" id="segs"></div>
+        <p class="slot-note"><svg class="ic"><use href="#i-zap"/></svg><span id="slotLeft"></span></p>
+        <div class="live">
+          <span class="dot"></span>
+          <span><b id="viewers">1.247</b> orang sedang melihat halaman ini</span>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="ticker-head">
+          <span class="klabel"><svg class="ic" style="width:13px;height:13px;vertical-align:-2px"><use href="#i-eye"/></svg> Aktivitas klaim</span>
+          <span class="dot" style="margin-left:auto"></span>
+        </div>
+        <ul class="feed" id="feed"></ul>
+      </section>
+
+      <div class="chips">
+        <span class="chip"><svg class="ic"><use href="#i-shield"/></svg>Terverifikasi</span>
+        <span class="chip"><svg class="ic"><use href="#i-zap"/></svg>Instan</span>
+        <span class="chip"><svg class="ic"><use href="#i-lock"/></svg>Aman</span>
+      </div>
+    </div>
+
+    
+    <div class="cta-wrap">
+      <div class="steps" id="steps"></div>
+      <button class="btn-cta" id="cta">
+        <span class="sheen"></span>
+        <svg class="ic" style="width:20px;height:20px"><use href="#i-gift"/></svg>
+        <span id="ctaLabel">BUKA HADIAH SEKARANG</span>
+        <svg class="ic chev" style="width:20px;height:20px"><use href="#i-chev"/></svg>
+      </button>
+      <p class="micro">*Gratis, tanpa login. Hadiah berupa apa pun yang muncul di layar.</p>
+    </div>
+  </section>
+
+  <!-- ============ SCENE 2 : PRANK! ============ -->
+  <section id="scenePrank">
+    <div id="rain"></div>
+    <div class="prank-inner">
+      <span class="eyebrow">Selamat, kamu dapat hadiah</span>
+      <h1 class="hiya">SATU EKOR<br><em>MONYET</em></h1>
+
+      <figure class="polaroid" id="polaroid">
+        <span class="tape-strip l"></span><span class="tape-strip r"></span>
+        <span class="stamp">KEPRANK!</span>
+        <img id="monkeyImg" alt="Monyet tersenyum — hadiahmu">
+        <figcaption class="cap">hadiah spesial buat kamu</figcaption>
+      </figure>
+
+      <p class="sub">Hadiah Rp40.000 tadi larinya kencang banget — diambil 10 monyet tercepat. Tapi tenang, kamu dapat yang paling ganteng.</p>
+
+      <div class="actions">
+        <button class="btn-dark" id="btnShare"><svg class="ic"><use href="#i-share"/></svg>PRANK TEMANMU JUGA</button>
+        <button class="btn-ghost" id="btnAgain"><svg class="ic"><use href="#i-refresh"/></svg>ULANGI</button>
+      </div>
+
+      <p class="tapline" id="tapMsg">Ketuk foto monyetnya — dia suka diperhatikan.</p>
+    </div>
+  </section>
+</div>
+
+<div id="flash"></div>
+<div id="toast"><svg class="ic"><use href="#i-check"/></svg><span></span></div>
+<button id="sndBtn" aria-label="Suara"><svg class="ic"><use href="#i-vol"/></svg></button>
+
+<script>
+/* ================== KONFIGURASI GAMBAR MONYET ================== */
+const MONKEY_SRC = 'https://z-cdn-media.chatglm.cn/files/3fb230c2-2e84-4400-9fc9-5d73e538bd35.jpg?auth_key=1888066595-8d328ad29b684898a77520d567ddb75a-0-072f1696a1f986fa92c207af2c0e8821';
+
+// Fallback: kalau link monyet kedaluwarsa, pakai monyet kartun SVG biar prank tetap jalan
+const FALLBACK_SVG = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'>
+<rect width='200' height='200' fill='#f7e9d0'/>
+<circle cx='52' cy='70' r='26' fill='%238d6748'/><circle cx='148' cy='70' r='26' fill='%238d6748'/>
+<circle cx='52' cy='70' r='14' fill='%23d9b38c'/><circle cx='148' cy='70' r='14' fill='%23d9b38c'/>
+<ellipse cx='100' cy='105' rx='52' ry='46' fill='%238d6748'/><ellipse cx='100' cy='115' rx='34' ry='30' fill='%23d9b38c'/>
+<circle cx='84' cy='92' r='7' fill='%23222'/><circle cx='116' cy='92' r='7' fill='%23222'/>
+<circle cx='86' cy='89' r='2.4' fill='white'/><circle cx='118' cy='89' r='2.4' fill='white'/>
+<ellipse cx='100' cy='110' rx='8' ry='5' fill='%23301f14'/>
+<path d='M82 124 Q100 140 118 124' stroke='%23301f14' stroke-width='4' fill='none' stroke-linecap='round'/>
+</svg>`;
+const FALLBACK_SRC = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(FALLBACK_SVG.replace(/%23/g, '#'));
+
+let monkeySrc = MONKEY_SRC;
+const monkeyImg = document.getElementById('monkeyImg');
+monkeyImg.src = MONKEY_SRC;
+monkeyImg.onerror = () => { if (monkeyImg.src !== FALLBACK_SRC) { monkeySrc = FALLBACK_SRC; monkeyImg.src = FALLBACK_SRC; } };
+
+/* ================== AUDIO (Web Audio API, tanpa file) ================== */
+let actx = null, master = null, muted = false;
+function ac(){
+  if (!actx) {
+    actx = new (window.AudioContext || window.webkitAudioContext)();
+    master = actx.createGain(); master.gain.value = .9; master.connect(actx.destination);
+  }
+  if (actx.state === 'suspended') actx.resume();
+  return actx;
+}
+function beep(f=880, d=.08, type='sine', v=.13){
+  if (muted) return;
+  const c = ac(), t = c.currentTime, o = c.createOscillator(), g = c.createGain();
+  o.type = type; o.frequency.value = f;
+  g.gain.setValueAtTime(1e-4, t);
+  g.gain.exponentialRampToValueAtTime(v, t + .012);
+  g.gain.exponentialRampToValueAtTime(1e-4, t + d);
+  o.connect(g); g.connect(master); o.start(t); o.stop(t + d + .02);
+}
+function buzz(){
+  if (muted) return;
+  const c = ac(), t = c.currentTime, o = c.createOscillator(), g = c.createGain();
+  o.type = 'sawtooth';
+  o.frequency.setValueAtTime(140, t);
+  o.frequency.exponentialRampToValueAtTime(70, t + .3);
+  g.gain.setValueAtTime(.18, t);
+  g.gain.exponentialRampToValueAtTime(1e-4, t + .32);
+  o.connect(g); g.connect(master); o.start(t); o.stop(t + .35);
+}
+// Trombone sedih: 4 nada turun, nada terakhir panjang + vibrato
+function sadTrombone(){
+  if (muted) return;
+  const c = ac();
+  const notes = [[233.08,.32],[220,.32],[207.65,.32],[196,1.15]];
+  let time = c.currentTime + .05;
+  notes.forEach(([f, d], i) => {
+    const o = c.createOscillator(); o.type = 'sawtooth';
+    const g = c.createGain();
+    const lp = c.createBiquadFilter(); lp.type = 'lowpass'; lp.frequency.value = 1100; lp.Q.value = 3;
+    const lfo = c.createOscillator(); lfo.frequency.value = 6.2;
+    const lfoG = c.createGain(); lfoG.gain.value = (i === notes.length - 1) ? 9 : 3;
+    lfo.connect(lfoG); lfoG.connect(o.frequency);
+    o.frequency.setValueAtTime(f, time);
+    if (i === notes.length - 1) o.frequency.linearRampToValueAtTime(f * .93, time + d);
+    g.gain.setValueAtTime(1e-4, time);
+    g.gain.exponentialRampToValueAtTime(.2, time + .04);
+    g.gain.setValueAtTime(.2, time + d * .7);
+    g.gain.exponentialRampToValueAtTime(1e-4, time + d);
+    o.connect(lp); lp.connect(g); g.connect(master);
+    o.start(time); lfo.start(time);
+    o.stop(time + d + .05); lfo.stop(time + d + .05);
+    time += d + .03;
+  });
+}
+// Suara monyet: "ook" (sweep turun, kadang dua kali)
+function ook(){
+  if (muted) return;
+  const c = ac(); let t = c.currentTime + .02;
+  const n = 1 + (Math.random() * 2 | 0);
+  for (let i = 0; i < n; i++) {
+    const o = c.createOscillator(), g = c.createGain(), f = c.createBiquadFilter();
+    f.type = 'lowpass'; f.frequency.value = 1500;
+    o.type = 'sawtooth';
+    const f0 = 420 + Math.random() * 120;
+    o.frequency.setValueAtTime(f0, t);
+    o.frequency.exponentialRampToValueAtTime(f0 * .45, t + .16);
+    g.gain.setValueAtTime(1e-4, t);
+    g.gain.exponentialRampToValueAtTime(.15, t + .02);
+    g.gain.exponentialRampToValueAtTime(1e-4, t + .18);
+    o.connect(f); f.connect(g); g.connect(master);
+    o.start(t); o.stop(t + .2); t += .19;
+  }
+}
+
+/* ================== TOAST ================== */
+let toastTimer;
+function toast(msg){
+  const t = document.getElementById('toast');
+  t.querySelector('span').textContent = msg;
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove('show'), 2600);
+}
+
+/* ================== SCENE PROMO: angka hidup ================== */
+// Count-up Rp40.000
+(function(){
+  const el = document.getElementById('amount');
+  const target = 40000, dur = 1400, t0 = performance.now();
+  (function step(t){
+    const p = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - p, 3);
+    el.textContent = 'Rp' + Math.round(target * e).toLocaleString('id-ID');
+    if (p < 1) requestAnimationFrame(step);
+  })(t0);
+})();
+
+// Countdown periode klaim
+let remain = 299;
+const mm = document.getElementById('mm'), ss = document.getElementById('ss');
+function renderCd(){
+  mm.textContent = String(Math.floor(remain / 60)).padStart(2, '0');
+  ss.textContent = String(remain % 60).padStart(2, '0');
+  const hot = remain <= 30;
+  mm.classList.toggle('hot', hot); ss.classList.toggle('hot', hot);
+}
+setInterval(() => { remain--; if (remain < 0) remain = 299; renderCd(); }, 1000);
+renderCd();
+
+// Slot 10 orang tercepat (bergeser pelan-pelan sampai sisa 1)
+let filled = 7; const SLOT_TOTAL = 10;
+const segs = document.getElementById('segs');
+function renderSlots(){
+  segs.innerHTML = '';
+  for (let i = 0; i < SLOT_TOTAL; i++) {
+    const d = document.createElement('div');
+    d.className = 'seg' + (i < filled ? ' on' : '') + (i === filled ? ' last' : '');
+    segs.appendChild(d);
+  }
+  document.getElementById('slotCount').textContent = filled + '/' + SLOT_TOTAL;
+  const left = SLOT_TOTAL - filled;
+  document.getElementById('slotLeft').textContent =
+    left === 1 ? 'Sisa 1 slot — yang terakhir!' : `Sisa ${left} slot — jangan sampai kehabisan!`;
+}
+renderSlots();
+(function scheduleFill(){
+  setTimeout(() => {
+    if (filled < 9 && !document.body.classList.contains('pranked')) { filled++; renderSlots(); addFeed(); }
+    scheduleFill();
+  }, 28000 + Math.random() * 26000);
+})();
+
+// Penonton "live" yang berfluktuasi
+let viewers = 1200 + (Math.random() * 400 | 0);
+const viewersEl = document.getElementById('viewers');
+setInterval(() => {
+  viewers = Math.max(900, viewers + (Math.random() * 25 | 0) - 10);
+  viewersEl.textContent = viewers.toLocaleString('id-ID');
+}, 2600);
+viewersEl.textContent = viewers.toLocaleString('id-ID');
+
+// Feed klaim palsu
+const FIRST = ['Andi','Budi','Citra','Dewi','Eko','Fitri','Gilang','Hana','Indra','Joko','Kiki','Lina','Maya','Nanda','Oki','Putri','Rizky','Sari','Tono','Vina','Wawan','Yuni','Zaki'];
+const LAST = ['S.','P.','R.','M.','K.','H.','N.','W.','A.','D.'];
+const CITY = ['Jakarta','Bandung','Surabaya','Medan','Makassar','Semarang','Palembang','Denpasar','Yogyakarta','Bogor','Tangerang','Bekasi','Malang','Depok'];
+const AV_COLORS = ['#108EE9','#00A8A8','#F5713D','#7C5CE0','#E0566F'];
+const feed = document.getElementById('feed');
+function addFeed(customName){
+  const li = document.createElement('li');
+  const name = customName || (FIRST[Math.random() * FIRST.length | 0] + ' ' + LAST[Math.random() * LAST.length | 0]);
+  const initials = name.split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase();
+  li.innerHTML =
+    `<span class="avatar" style="background:${AV_COLORS[Math.random() * AV_COLORS.length | 0]}">${initials}</span>` +
+    `<span class="who"><b>${name}</b><span>${CITY[Math.random() * CITY.length | 0]}</span></span>` +
+    `<span class="amt">+Rp40.000</span>` +
+    `<span class="when" data-ts="${Date.now()}">baru saja</span>`;
+  feed.prepend(li);
+  while (feed.children.length > 5) feed.lastElementChild.remove();
+}
+addFeed('Dita R.'); addFeed('Bagas P.'); addFeed('Nadia S.');
+setInterval(() => { if (!document.body.classList.contains('pranked')) addFeed(); }, 5200);
+setInterval(() => {
+  document.querySelectorAll('#feed .when').forEach(w => {
+    const dt = Math.floor((Date.now() - +w.dataset.ts) / 60000);
+    w.textContent = dt < 1 ? 'baru saja' : dt + ' mnt';
+  });
+}, 20000);
+
+/* ================== KLIK TOMBOL: VERIFIKASI PALSU → REVEAL ================== */
+const cta = document.getElementById('cta');
+const ctaLabel = document.getElementById('ctaLabel');
+const steps = document.getElementById('steps');
+let busy = false;
+
+function mkStep(txt){
+  const d = document.createElement('div');
+  d.className = 'step';
+  d.innerHTML = `<span class="st"><span class="spinner"></span></span><span class="lbl">${txt}</span>`;
+  steps.appendChild(d);
+  return d;
+}
+function okStep(el){
+  el.classList.add('done');
+  el.querySelector('.st').innerHTML = '<svg class="ic"><use href="#i-check"/></svg>';
+  beep(740 + Math.random() * 90, .09);
+}
+function failStep(el, txt){
+  el.classList.add('fail');
+  el.querySelector('.st').innerHTML = '<svg class="ic"><use href="#i-alert"/></svg>';
+  el.querySelector('.lbl').textContent = txt;
+  buzz();
+}
+
+cta.addEventListener('click', () => {
+  if (busy) return;
+  busy = true;
+  ac(); // aktifkan audio dari gesture pengguna
+  cta.disabled = true;
+  ctaLabel.textContent = 'MEMPROSES HADIAH…';
+  steps.classList.add('show');
+  beep(600, .07);
+
+  const s1 = mkStep('Memverifikasi perangkat…');
+  setTimeout(() => {
+    okStep(s1);
+    const s2 = mkStep('Menghubungi server DANA…');
+    setTimeout(() => {
+      okStep(s2);
+      const s3 = mkStep('Menyiapkan saldo Rp40.000…');
+      setTimeout(() => {
+        okStep(s3);
+        const s4 = mkStep('Mengambil hadiah dari gudang…');
+        setTimeout(() => {
+          failStep(s4, 'GAGAL: hadiah sedang dikunyah.');
+          ctaLabel.textContent = 'TUNGGU…';
+          setTimeout(reveal, 750);
+        }, 1200);
+      }, 600);
+    }, 600);
+  }, 500);
+});
+
+function reveal(){
+  document.body.classList.add('pranked');
+  document.title = 'KEPRANK!';
+  const flash = document.getElementById('flash');
+  flash.classList.add('go');
+  setTimeout(() => flash.classList.remove('go'), 600);
+  const phone = document.getElementById('phone');
+  phone.classList.add('shake');
+  setTimeout(() => phone.classList.remove('shake'), 600);
+  phone.scrollTop = 0;
+  sadTrombone();
+  startRain();
+}
+
+/* ================== HUJAN MONYET ================== */
+let rainTimers = [];
+function spawnDrop(xPx){
+  const rain = document.getElementById('rain');
+  const w = rain.clientWidth || 400;
+  const d = document.createElement('div');
+  d.className = 'drop';
+  const size = 34 + Math.random() * 34;
+  d.style.width = d.style.height = size + 'px';
+  d.style.left = (xPx !== undefined ? xPx - size / 2 : Math.random() * (w - size)) + 'px';
+  d.style.setProperty('--dx', (Math.random() * 120 - 60) + 'px');
+  d.style.setProperty('--spin', (Math.random() * 520 - 260) + 'deg');
+  d.style.setProperty('--dur', (2.1 + Math.random() * 1.6) + 's');
+  d.style.setProperty('--delay', (Math.random() * .5) + 's');
+  const im = document.createElement('img');
+  im.src = monkeySrc; im.alt = '';
+  d.appendChild(im);
+  rain.appendChild(d);
+  d.addEventListener('animationend', () => d.remove());
+}
+function startRain(){
+  stopRain();
+  for (let w = 0; w < 5; w++) {
+    rainTimers.push(setTimeout(() => {
+      for (let i = 0; i < 12; i++) spawnDrop();
+    }, w * 1300));
+  }
+}
+function stopRain(){
+  rainTimers.forEach(clearTimeout); rainTimers = [];
+  document.getElementById('rain').innerHTML = '';
+}
+
+// Ketuk latar kuning = monyet jatuh dari langit di titik itu
+document.getElementById('scenePrank').addEventListener('click', e => {
+  if (e.target.closest('button, .polaroid')) return;
+  const rect = e.currentTarget.getBoundingClientRect();
+  spawnDrop(e.clientX - rect.left);
+});
+
+/* ================== MONYET BISA DIKETUK ================== */
+const polaroid = document.getElementById('polaroid');
+const tapMsg = document.getElementById('tapMsg');
+let taps = 0;
+const TAP_LINES = {
+  1: 'Monyet tersipu malu.',
+  3: 'Monyet mulai curiga.',
+  6: 'Monyet menatapmu balik.',
+  10: 'Ook. Ook ook.',
+  15: 'Monyet mempertimbangkan memaafkanmu.',
+  20: 'Kalian resmi jadi sahabat.',
+  30: 'Monyet minta dibuatkan akun DANA.'
+};
+polaroid.addEventListener('click', e => {
+  e.stopPropagation();
+  taps++; ook();
+  polaroid.classList.remove('wiggle');
+  void polaroid.offsetWidth; // restart animasi
+  polaroid.classList.add('wiggle');
+  for (let i = 0; i < 2; i++) {
+    const h = document.createElement('span');
+    h.className = 'heart';
+    h.style.left = (20 + Math.random() * 60) + '%';
+    h.style.top = (25 + Math.random() * 45) + '%';
+    h.innerHTML = '<svg class="ic"><use href="#i-heart"/></svg>';
+    polaroid.appendChild(h);
+    setTimeout(() => h.remove(), 950);
+  }
+  tapMsg.textContent = TAP_LINES[taps] || `Diketuk ${taps}\u00d7 — monyet ini sabar luar biasa.`;
+});
+
+/* ================== TOMBOL AKSI PRANK ================== */
+document.getElementById('btnShare').addEventListener('click', async () => {
+  ook();
+  const url = location.href;
+  try {
+    await navigator.clipboard.writeText(url);
+    toast('Link tersalin — kirim ke korban berikutnya!');
+  } catch {
+    const ta = document.createElement('textarea');
+    ta.value = url; document.body.appendChild(ta); ta.select();
+    try { document.execCommand('copy'); toast('Link tersalin — kirim ke korban berikutnya!'); }
+    catch { toast('Salin linknya dari address bar ya.'); }
+    ta.remove();
+  }
+});
+
+document.getElementById('btnAgain').addEventListener('click', () => {
+  document.body.classList.remove('pranked');
+  document.title = 'DANA — Klaim Rp40.000 Sekarang';
+  stopRain();
+  steps.classList.remove('show'); steps.innerHTML = '';
+  cta.disabled = false; busy = false;
+  ctaLabel.textContent = 'BUKA HADIAH SEKARANG';
+  document.getElementById('phone').scrollTop = 0;
+  toast('Prank direset. Gaskeun lagi!');
+});
+
+/* ================== TOGGLE SUARA ================== */
+const sndBtn = document.getElementById('sndBtn');
+sndBtn.addEventListener('click', () => {
+  muted = !muted;
+  sndBtn.innerHTML = `<svg class="ic"><use href="#${muted ? 'i-volx' : 'i-vol'}"/></svg>`;
+  if (!muted) beep(880, .07);
+});
+</script>
+</body>
+</html>
